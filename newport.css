@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'sora', sans-serif;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    /* background-color: rgb(220, 110, 225); */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    overflow: hidden;
+}
+
+section nav {
+    height: 60px; 
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.container-wrapper {
+    width: 80%;
+    /* background-color: aqua; */
+}
+
+nav .container-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .container-wrapper h1 {
+    font-weight: 600px;
+    font-size: 24px;
+}
+
+nav .container-wrapper ul {
+    list-style: none;
+    font-weight: 500;
+    display: flex;
+    gap: 30px;
+}
+nav .container-wrapper ul li a {
+    text-decoration: none;
+}
+
+
+@media (max-width:3000px){
+   nav .container-wrapper i .fa-burger{
+    display: none;
+}
+
+nav .container-wrapper label[for="hamburger"] {
+    display: none;
+}
+nav .container-wrapper #hamburger{
+    display: none;
+}
+}
+
+@media (max-width:768px){
+
+    nav .container-wrapper {
+        position: relative;
+    }
+
+    nav .container-wrapper i .fa-burger{
+     display: block;
+    }
+    
+    nav .container-wrapper label[for="hamburger"] {
+     display: block;
+    }
+    nav .container-wrapper #hamburger{
+     display: none;
+    }
+    
+    #hamburger{
+        color: crimson;
+        display: block;
+        cursor: pointer;
+    }
+    nav .container-wrapper ul {
+        width: 120px;
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        background-color: rgb(248, 206, 176);
+        top: 60px;
+        right: -100%;
+        overflow: hidden;
+    }
+    
+    #hamburger:checked ~ ul {
+        top: 80px;
+        right: 10px;
+        z-index: 1000;
+        transition: 0.5ms;
+        overflow: hidden;
+    }
+
+
+}
